@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Produto</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="cabecalho">
+    <p>Atividade de Compensação</p>
+    <nav>
+      <a href="{{ url_for('cadastrar') }}">Cadastrar Produtos</a>
+      <a href="{{ url_for('lista') }}">Lista de Produtos</a>
+    </nav>
+  </div>
+
+  <h1 class="titulo">Editar Produto</h1>
+
+  {% if error %}
+  <div class="error">{{ error }}</div>
+  {% endif %}
+
+  <form class="form-editar" method="post" action="{{ url_for('editar', index=index) }}">
+    <input type="text" name="produto" value="{{ produto.nome }}" required>
+    <input type="number" name="quantidade" value="{{ produto.quantidade }}" required min="1">
+    <input type="number" name="preco" value="{{ "%.2f"|format(produto.preco) }}" required step="0.01" min="0.01">
+    <button type="submit">Salvar Alterações</button>
+  </form>
+</body>
+</html>

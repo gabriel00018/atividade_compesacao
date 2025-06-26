@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Produto</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="cabecalho">
+    <p>Atividade de Compensação</p>
+    <nav>
+      <a href="{{ url_for('cadastrar') }}">Cadastrar Produtos</a>
+      <a href="{{ url_for('lista') }}">Lista de Produtos</a>
+    </nav>
+  </div>
+
+  <h1 class="titulo">Cadastrar Produto</h1>
+
+  <!-- Alterei a classe para "form-editar" (igual ao seu CSS) -->
+  <form class="form-editar" method="post" action="{{ url_for('cadastrar') }}">
+    {% if error %}
+    <div class="error">{{ error }}</div>
+    {% endif %}
+    <input type="text" name="produto" placeholder="Nome do Produto" required>
+    <input type="number" name="quantidade" placeholder="Quantidade de Produtos" required min="1">
+    <input type="number" name="preco_do_produto" placeholder="Preço do Produto" required step="0.01" min="0.01">
+    <button type="submit">Cadastrar</button>
+  </form>
+</body>
+</html>

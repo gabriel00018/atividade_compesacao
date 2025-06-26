@@ -1,0 +1,95 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00ff95;
+    padding: 15px 40px;
+    height: 43px;
+}
+
+.cabecalho p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav a {
+    margin: 0px 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+.titulo {
+  display: flex;
+  justify-content: center; /* centraliza na horizontal */
+  width: 100%;
+  margin-top: 30px; /* espaço opcional do topo */
+  margin-bottom: 100px;
+}
+
+
+/* Estilo da div da tabela */
+.tabela {
+  width: 90%;
+  margin: 30px auto;
+  overflow-x: auto;
+}
+
+/* Estilo da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Cabeçalho da tabela */
+thead {
+  background-color: #00ff95; /* azul */
+  color: #000;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+/* Linhas alternadas para melhor leitura */
+tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+/* Estilo dos links de ação */
+td a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+
+.valor-total {
+  width: 90%;
+  margin: 30px auto 60px;
+  margin-top:70px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  color: #333;
+}

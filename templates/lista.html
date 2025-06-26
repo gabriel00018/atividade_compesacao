@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Produtos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/lista.css') }}">
+</head>
+<body>
+  <div class="cabecalho">
+    <p>Atividade de Compensação</p>
+    <nav>
+      <a href="{{ url_for('cadastrar') }}">Cadastrar Produtos</a>
+      <a href="{{ url_for('lista') }}">Lista de Produtos</a>
+    </nav>
+  </div>
+
+  <h1 class="titulo">Lista de Produtos Cadastrados</h1>
+
+  <div class="tabela">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Quantidade</th>
+          <th>Preço Unitário</th>
+          <th>Total</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for produto in produtos %}
+        <tr>
+          <td>{{ produto.nome }}</td>
+          <td>{{ produto.quantidade }}</td>
+          <td>R$ {{ "%.2f"|format(produto.preco) }}</td>
+          <td>R$ {{ "%.2f"|format(produto.preco * produto.quantidade) }}</td>
+          <td>
+            <a href="{{ url_for('editar', index=loop.index0) }}">Editar</a> |
+            <a href="{{ url_for('excluir', index=loop.index0) }}">Excluir</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="valor-total">
+    <p>Valor total da compra: <strong>R$ {{ "%.2f"|format(total) }}</strong></p>
+  </div>
+</body>
+</html>
