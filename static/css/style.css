@@ -1,70 +1,106 @@
+/* Reset global de margens e paddings */
 *{
-    margin: 0 ;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
+    margin: 0 ; /* Remove todas as margens */
+    padding: 0; /* Remove todos os paddings */
+    /* Define a fonte padrão */
+    font-family: "Montserrat", sans-serif; /* Define a fonte Montserrat como padrão */
 }
 
-
+/* Estilo do cabeçalho */
 .cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #00ff95;
-    padding: 15px 40px;
-    height: 43px;
+    /* Layout flexível alinhado ao centro */
+    display: flex; /* Ativa o flexbox */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    /* Cor de fundo verde */
+    background-color: #00ff95; /* Cor verde vibrante */
+    /* Espaçamento interno */
+    padding: 15px 40px; /* 15px top/bottom, 40px left/right */
+    /* Altura fixa */
+    height: 43px; /* Altura fixa do cabeçalho */
 }
 
+/* Estilo do parágrafo no cabeçalho */
 .cabecalho p {
-  font-size: 20px;
-  font-weight: bold;
+  /* Tamanho e peso da fonte */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: bold; /* Fonte em negrito */
 }
 
+/* Estilo dos links de navegação */
 nav a {
-    margin: 0px 25px;
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
+    /* Margem horizontal entre links */
+    margin: 0px 25px; /* 0px top/bottom, 25px left/right */
+    /* Cor preta sem sublinhado */
+    color: black; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    /* Peso e tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 18px; /* Tamanho da fonte */
 }
 
-
+/* Estilo do título principal */
 .titulo {
-  display: flex;
-  justify-content: center; /* centraliza na horizontal */
-  width: 100%;
-  margin-top: 30px; /* espaço opcional do topo */
-  margin-bottom: 100px;
+  /* Centralização horizontal */
+  display: flex; /* Ativa o flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  /* Largura total */
+  width: 100%; /* Ocupa 100% da largura */
+  /* Margens superior e inferior */
+  margin-top: 30px; /* Margem superior */
+  margin-bottom: 100px; /* Margem inferior */
 }
 
-
+/* Estilo do formulário de edição */
 .form-editar {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  margin: 0 auto;
-  gap: 20px;
-  margin-bottom: 80px;
+  /* Layout em coluna */
+  display: flex; /* Ativa o flexbox */
+  flex-direction: column; /* Organiza itens em coluna */
+  /* Largura fixa */
+  width: 400px; /* Largura fixa do formulário */
+  /* Centralização horizontal */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  /* Espaço entre elementos */
+  gap: 20px; /* Espaço entre os elementos do formulário */
+  /* Margem inferior */
+  margin-bottom: 80px; /* Margem abaixo do formulário */
 }
 
+/* Estilo dos inputs do formulário */
 .form-editar input {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  /* Espaçamento interno */
+  padding: 12px; /* Espaçamento interno */
+  /* Tamanho da fonte */
+  font-size: 16px; /* Tamanho da fonte */
+  /* Borda sutil */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  /* Bordas arredondadas */
+  border-radius: 8px; /* Cantos arredondados */
 }
 
+/* Estilo do botão do formulário */
 .form-editar button {
-  padding: 12px;
-  background-color: #00ff95;
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  /* Espaçamento interno */
+  padding: 12px; /* Espaçamento interno */
+  /* Cor de fundo verde */
+  background-color: #00ff95; /* Cor verde vibrante */
+  /* Cor do texto */
+  color: black; /* Cor do texto */
+  /* Tamanho e peso da fonte */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Fonte em negrito */
+  /* Sem borda */
+  border: none; /* Remove borda */
+  /* Bordas arredondadas */
+  border-radius: 8px; /* Cantos arredondados */
+  /* Cursor pointer */
+  cursor: pointer; /* Muda cursor para pointer */
+  /* Transição suave de cor */
+  transition: background-color 0.3s; /* Transição suave de cor */
 }
 
+/* Efeito hover no botão */
 .form-editar button:hover {
-  background-color: #00e685;
+  /* Cor de fundo mais escura no hover */
+  background-color: #00e685; /* Cor verde mais escura */
 }
