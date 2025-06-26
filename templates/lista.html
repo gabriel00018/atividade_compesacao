@@ -1,51 +1,51 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Lista de Produtos</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/lista.css') }}">
-</head>
-<body>
-  <div class="cabecalho">
-    <p>Atividade de Compensação</p>
-    <nav>
-      <a href="{{ url_for('cadastrar') }}">Cadastrar Produtos</a>
-      <a href="{{ url_for('lista') }}">Lista de Produtos</a>
-    </nav>
-  </div>
+<!DOCTYPE html> <!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como português brasileiro -->
+<head> <!-- Início da seção de cabeçalho -->
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <title>Lista de Produtos</title> <!-- Título da página exibido na aba do navegador -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/lista.css') }}"> <!-- Link para o arquivo CSS específico -->
+</head> <!-- Fim da seção de cabeçalho -->
+<body> <!-- Início do corpo do documento -->
+  <div class="cabecalho"> <!-- Div do cabeçalho com classe CSS -->
+    <p>Atividade de Compensação</p> <!-- Título do cabeçalho -->
+    <nav> <!-- Menu de navegação -->
+      <a href="{{ url_for('cadastrar') }}">Cadastrar Produtos</a> <!-- Link para cadastro -->
+      <a href="{{ url_for('lista') }}">Lista de Produtos</a> <!-- Link para lista -->
+    </nav> <!-- Fim do menu -->
+  </div> <!-- Fim do cabeçalho -->
 
-  <h1 class="titulo">Lista de Produtos Cadastrados</h1>
+  <h1 class="titulo">Lista de Produtos Cadastrados</h1> <!-- Título principal da página -->
 
-  <div class="tabela">
-    <table>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Quantidade</th>
-          <th>Preço Unitário</th>
-          <th>Total</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for produto in produtos %}
-        <tr>
-          <td>{{ produto.nome }}</td>
-          <td>{{ produto.quantidade }}</td>
-          <td>R$ {{ "%.2f"|format(produto.preco) }}</td>
-          <td>R$ {{ "%.2f"|format(produto.preco * produto.quantidade) }}</td>
-          <td>
-            <a href="{{ url_for('editar', index=loop.index0) }}">Editar</a> |
-            <a href="{{ url_for('excluir', index=loop.index0) }}">Excluir</a>
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div>
+  <div class="tabela"> <!-- Container da tabela -->
+    <table> <!-- Tabela de produtos -->
+      <thead> <!-- Cabeçalho da tabela -->
+        <tr> <!-- Linha do cabeçalho -->
+          <th>Nome</th> <!-- Coluna Nome -->
+          <th>Quantidade</th> <!-- Coluna Quantidade -->
+          <th>Preço Unitário</th> <!-- Coluna Preço Unitário -->
+          <th>Total</th> <!-- Coluna Total -->
+          <th>Ações</th> <!-- Coluna Ações -->
+        </tr> <!-- Fim da linha do cabeçalho -->
+      </thead> <!-- Fim do cabeçalho da tabela -->
+      <tbody> <!-- Corpo da tabela -->
+        {% for produto in produtos %} <!-- Loop através da lista de produtos -->
+        <tr> <!-- Linha para cada produto -->
+          <td>{{ produto.nome }}</td> <!-- Célula com nome do produto -->
+          <td>{{ produto.quantidade }}</td> <!-- Célula com quantidade -->
+          <td>R$ {{ "%.2f"|format(produto.preco) }}</td> <!-- Célula com preço unitário formatado -->
+          <td>R$ {{ "%.2f"|format(produto.preco * produto.quantidade) }}</td> <!-- Célula com total calculado -->
+          <td> <!-- Célula de ações -->
+            <a href="{{ url_for('editar', index=loop.index0) }}">Editar</a> | <!-- Link para editar -->
+            <a href="{{ url_for('excluir', index=loop.index0) }}">Excluir</a> <!-- Link para excluir -->
+          </td> <!-- Fim da célula de ações -->
+        </tr> <!-- Fim da linha do produto -->
+        {% endfor %} <!-- Fim do loop -->
+      </tbody> <!-- Fim do corpo da tabela -->
+    </table> <!-- Fim da tabela -->
+  </div> <!-- Fim do container da tabela -->
 
-  <div class="valor-total">
-    <p>Valor total da compra: <strong>R$ {{ "%.2f"|format(total) }}</strong></p>
-  </div>
-</body>
-</html>
+  <div class="valor-total"> <!-- Container do valor total -->
+    <p>Valor total da compra: <strong>R$ {{ "%.2f"|format(total) }}</strong></p> <!-- Exibição do valor total formatado -->
+  </div> <!-- Fim do container -->
+</body> <!-- Fim do corpo do documento -->
+</html> <!-- Fim do documento HTML -->
