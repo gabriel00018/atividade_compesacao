@@ -1,95 +1,100 @@
+
+/* Reset global */
 *{
-    margin: 0 ;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
+    margin: 0 ; /* Remove todas as margens */
+    padding: 0; /* Remove todos os paddings */
+    font-family: "Montserrat", sans-serif; /* Define a fonte padrão */
 }
 
-
+/* Estilo do cabeçalho */
 .cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #00ff95;
-    padding: 15px 40px;
-    height: 43px;
+    display: flex; /* Ativa o flexbox */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Alinha itens verticalmente */
+    background-color: #00ff95; /* Cor de fundo verde */
+    padding: 15px 40px; /* Espaçamento interno */
+    height: 43px; /* Altura fixa */
 }
 
+/* Estilo do texto no cabeçalho */
 .cabecalho p {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: bold; /* Fonte em negrito */
 }
 
+/* Estilo dos links de navegação */
 nav a {
-    margin: 0px 25px;
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
+    margin: 0px 25px; /* Margem horizontal */
+    color: black; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 18px; /* Tamanho da fonte */
 }
 
-
+/* Estilo do título principal */
 .titulo {
-  display: flex;
-  justify-content: center; /* centraliza na horizontal */
-  width: 100%;
-  margin-top: 30px; /* espaço opcional do topo */
-  margin-bottom: 100px;
+  display: flex; /* Ativa o flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  width: 100%; /* Largura total */
+  margin-top: 30px; /* Margem superior */
+  margin-bottom: 100px; /* Margem inferior */
 }
 
-
-/* Estilo da div da tabela */
+/* Container da tabela */
 .tabela {
-  width: 90%;
-  margin: 30px auto;
-  overflow-x: auto;
+  width: 90%; /* Largura de 90% do container pai */
+  margin: 30px auto; /* Margem superior/inferior de 30px e centralizada */
+  overflow-x: auto; /* Adiciona scroll horizontal se necessário */
 }
 
 /* Estilo da tabela */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
+  width: 100%; /* Largura total */
+  border-collapse: collapse; /* Remove espaços entre células */
+  background-color: #fff; /* Fundo branco */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra sutil */
+  border-radius: 8px; /* Cantos arredondados */
+  overflow: hidden; /* Esconde conteúdo que ultrapassa */
 }
 
 /* Cabeçalho da tabela */
 thead {
-  background-color: #00ff95; /* azul */
-  color: #000;
+  background-color: #00ff95; /* Cor de fundo verde */
+  color: #000; /* Cor do texto */
 }
 
+/* Células da tabela */
 th, td {
-  padding: 14px 18px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  font-size: 16px;
+  padding: 14px 18px; /* Espaçamento interno */
+  text-align: left; /* Alinhamento à esquerda */
+  border-bottom: 1px solid #ddd; /* Borda inferior */
+  font-size: 16px; /* Tamanho da fonte */
 }
 
-/* Linhas alternadas para melhor leitura */
+/* Linhas alternadas */
 tbody tr:nth-child(even) {
-  background-color: #fff;
+  background-color: #fff; /* Mantém fundo branco */
 }
 
-/* Estilo dos links de ação */
+/* Links de ação */
 td a {
-  color: #000000;
-  text-decoration: none;
-  font-weight: bold;
+  color: #007bff; /* Cor azul */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: bold; /* Fonte em negrito */
 }
 
+/* Efeito hover nos links */
 td a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Adiciona sublinhado */
 }
 
-
+/* Container do valor total */
 .valor-total {
-  width: 90%;
-  margin: 30px auto 60px;
-  margin-top:70px;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: right;
-  color: #333;
+  width: 90%; /* Largura de 90% */
+  margin: 30px auto 60px; /* Margens superior/direita/inferior/esquerda */
+  margin-top:70px; /* Margem superior adicional */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: bold; /* Fonte em negrito */
+  text-align: right; /* Alinhamento à direita */
+  color: #333; /* Cor do texto */
 }
